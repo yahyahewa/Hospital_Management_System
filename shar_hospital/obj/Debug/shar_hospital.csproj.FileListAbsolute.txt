@@ -1,0 +1,7 @@
+P:\prj\shar_hospital\shar_hospital\bin\shar_hospital.dll.config
+P:\prj\shar_hospital\shar_hospital\bin\shar_hospital.dll
+P:\prj\shar_hospital\shar_hospital\bin\shar_hospital.pdb
+P:\prj\shar_hospital\shar_hospital\obj\Debug\shar_hospital.csproj.CoreCompileInputs.cache
+P:\prj\shar_hospital\shar_hospital\obj\Debug\shar_hospital.dll
+P:\prj\shar_hospital\shar_hospital\obj\Debug\shar_hospital.pdb
+P:\prj\shar_hospital\shar_hospital\obj\Debug\shar_hospital.csproj.AssemblyReference.cache

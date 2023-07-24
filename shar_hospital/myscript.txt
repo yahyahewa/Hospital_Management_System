@@ -1,0 +1,153 @@
+$(function(){
+  // put a random course in the recommended section
+  recommend();
+  
+  // showing the details of web courses
+  $(".HTMLc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".HTML").removeClass("d-none");
+  });
+  $(".CSSc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".CSS").removeClass("d-none");
+  });
+  $(".JSc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".JS").removeClass("d-none");
+  });
+  $(".BQc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".BQ").removeClass("d-none");
+  });
+  // showing the details of Programming courses 
+  $(".javac").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".Java").removeClass("d-none");
+  });
+  $(".Cc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".C").removeClass("d-none");
+  });
+  $(".playc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".play").removeClass("d-none");
+  });
+  $(".pythonc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".python").removeClass("d-none");
+  });
+  // showing the details of database courses
+  $(".bootcampc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".bootcamp").removeClass("d-none");
+  });
+  $(".analytics").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".analytic").removeClass("d-none");
+  });
+  $(".serverc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".server").removeClass("d-none");
+  });
+  $(".oraclec").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".oracle").removeClass("d-none");
+  });
+  //showing the details of network cources
+  $(".ciscoc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".cisco").removeClass("d-none");
+  });
+  $(".googlec").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".google").removeClass("d-none");
+  });
+  $(".computerc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".computer").removeClass("d-none");
+  });
+  $(".stanfordc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".stanford").removeClass("d-none");
+  });
+  //showing the details of security cources
+  $(".cyberc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".cyber").removeClass("d-none");
+  });
+  $(".mitc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".mit").removeClass("d-none");
+  });
+  $(".csc").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".cs").removeClass("d-none");
+  });
+  $(".unic").on("click",function(){
+    $(".detail").addClass("d-none");
+    $(".uni").removeClass("d-none");
+  });
+  // about page buttons
+  $(".about-usbtn").on("click",function(){
+    $(".info").addClass("d-none");
+    $(".about-us").removeClass("d-none");
+  });
+  $(".contact-usbtn").on("click",function(){
+    $(".info").addClass("d-none");
+    $(".contact-us").removeClass("d-none");
+  });
+  $(".locationbtn").on("click",function(){
+    $(".info").addClass("d-none");
+    $(".location").removeClass("d-none");
+  });
+
+  // closing the details of the courses when the x button is clicked
+  $(".close").on("click",function(){
+    $(".detail").addClass("d-none");
+  });
+});
+function recommend() {
+  // we have five favorite courses to recommend
+  // find a random course by creating its img source
+  var num = getRandom();
+  var img = getimg(num);
+  var name = getname(num);
+  // create the card conatining the random course
+  var course = "<div class='card  bg-dark mx-auto w-75 m-3'>";
+  course += img;
+  course += " <div class='card-body m-n1'>";
+  course += "<h5 class='card-title text-center text-white'>"
+  course += name + "</h5>";
+  course += "<button class='btn btn-light btn-block '>Apply now 29.99$</button></div></div>  ";
+  // add it to the card
+  $(".recommended").append(course);
+}
+function getRandom(){
+  return  Math.floor((Math.random()*5) +1);
+}
+function getimg(number) {
+  if (number == 1) {
+    return "<img class='card-img-top' src='Images/html1.jpg' >";
+  }else if(number == 2){
+    return "<img class='card-img-top' src='Images/analytics.jpg' >";
+  }else if(number == 3){
+    return "<img class='card-img-top' src='Images/cisco.png' >";
+  }else if(number == 4){
+    return "<img class='card-img-top' src='Images/java1.jpg' >";
+  }else {
+    return "<img class='card-img-top' src='Images/mit.png' >";
+  }
+}
+function getname(number) {
+  if (number == 1) {
+    return "HTML";
+  }else if(number == 2){
+    return "SQL for Newbs: Data Analysis for Beginners";
+  }else if(number == 3){
+    return "Cisco Networking Basics Specialization (Coursera)";
+  }else if(number == 4){
+    return "Java";
+  }else {
+    return "Cybersecurity for Managers (MIT Management Executive Education)";
+  }
+}
